@@ -1,0 +1,43 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Custom */
+$link-color: #009;
+$link-hover: #66C;
+$link-checked: #C66;
+$light-color: #CDD;
+
+
+a {
+	color: $link-color;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $link-hover;
+}
+
+.btn-move {
+	background-color: $link-color;
+  border-color: transparent;
+}
+
+.btn-move:hover{
+	background-color: $link-hover;
+}
+
+.btn-check:checked + .btn-move {
+  background-color: $link-checked;
+    border-color: transparent;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+  background-color: $light-color;
+}
