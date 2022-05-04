@@ -1,11 +1,15 @@
-<%= if @move == "unchosen" do %>
+<%= if @yourmove == "unchosen" do %>
   <%= render "move.html" %>
 <% end %>
 
 
-<%= if @move != "unchosen" do %>
+<%= if @yourmove != "unchosen" do %>
   <section>
-    <p>You chose: <%= @move %></p>
+    <p>You chose <%= @yourmove %>. I chose <%= @mymove %>.</p>
+
+    <p><%= explainer(@yourmove, @mymove) %></p>
+
+    <h3><%= winner(@yourmove, @mymove) %></h3>
 
     <form>
       <button type="submit" class="btn btn-primary" name="move" id="play_again" value="unchosen">Play Again</button>
